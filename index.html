@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>クイズ</title>
+</head>
+<body>
+    <script>
+        let random1 = Math.floor(Math.random() * 11);
+        let random2 = Math.floor(Math.random() * 11);
+        let quiz = prompt(random1 + "+" + random2 + "=?");
+        if (quiz == random1 + random2){
+            alert("正解");
+            again()
+        }else{
+            alert("不正解");
+            again();
+        }
+        function again(){
+            let reload = confirm("もう一度挑戦しますか？");
+            if (reload){
+                location.reload();
+            }
+        }
+    </script>
+</body>
+</html>
